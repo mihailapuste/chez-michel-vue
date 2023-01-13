@@ -1,4 +1,5 @@
 <template>
+  <Observer>
   <div class="bg-scroll m-20">
 
     <div class="relative flex space-x-5 items-center">
@@ -8,7 +9,7 @@
     </div>
 
     <div class="m-5 grid grid-cols-4 gap-2 place-content-end">
-      <div v-for="item in schedule" :key="item.day">
+      <div v-for="item in scheduleDays" :key="item.day">
         <p class="capitalize font-body text-center text-xl">
           {{ item.day }}
         </p>
@@ -17,14 +18,21 @@
         </p>
       </div>
     </div>
-
   </div>
+</Observer>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import HeadlineComponent from '@/components/HeadlineComponent.vue';
 import NavBar from '@/components/NavBar/index.vue';
+import store from '@/store';
+
+const {
+  scheduleStore: {
+    scheduleDays,
+  },
+} = store;
 
 @Options({
   components: {
@@ -34,23 +42,6 @@ import NavBar from '@/components/NavBar/index.vue';
 })
 
 export default class HomeView extends Vue {
-  schedule: {day: string, hours: string}[] = [
-    {
-      day: 'mon - tue',
-      hours: 'closed',
-    },
-    {
-      day: 'wed - thu',
-      hours: '18:00 - 23:00',
-    },
-    {
-      day: 'fri - sat',
-      hours: '18:00 - 1:00',
-    },
-    {
-      day: 'sunday',
-      hours: '17:00 - 20:00',
-    },
-  ]
+  scheduleDays = scheduleDays
 }
 </script>

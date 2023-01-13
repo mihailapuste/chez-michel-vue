@@ -1,14 +1,8 @@
-import { createStore } from 'vuex';
+import RootStore from './rootStore';
 
-export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  },
+const rootStore = RootStore.create({
 });
+
+export default {
+  ...rootStore,
+};
