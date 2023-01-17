@@ -13,6 +13,7 @@
     "mobx": "^6.7.0",
     "mobx-state-tree": "^5.1.7",
     "mobx-vue-lite": "^0.3.1",
+    "moment": "^2.29.4",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.3",
@@ -60,7 +61,8 @@
       "consistent-return": "off",
       "func-names": "off",
       "import/prefer-default-export": "off",
-      "no-use-before-define": "off"
+      "no-use-before-define": "off",
+      "vue/multi-word-component-names": "off"
     }
   },
   "browserslist": [
