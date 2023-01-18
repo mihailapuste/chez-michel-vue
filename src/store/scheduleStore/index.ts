@@ -1,4 +1,4 @@
-import { getSchedule } from '@/api/scheduleApi';
+import { getSchedule } from '@/api';
 import { flow, Instance, types } from 'mobx-state-tree';
 import moment from 'moment';
 

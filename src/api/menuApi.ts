@@ -1,8 +1,8 @@
 import { baseApi } from './baseApi';
 
-const getSchedule = async () => {
+const getMenu = async () => {
   try {
-    const response = await baseApi.get('schedule/');
+    const response = await baseApi.get('menu/');
 
     return response.data;
   } catch (error) {
@@ -11,5 +11,5 @@ const getSchedule = async () => {
 };
 
 export {
-  getSchedule,
+  getMenu,
 };

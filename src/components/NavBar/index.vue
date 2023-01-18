@@ -19,7 +19,7 @@ import NavItem from './components/NavItem.vue';
 export default class NavBar extends Vue {
   items: { name: string, path: string }[] = [
     { name: 'home', path: '/' },
-    { name: 'about', path: '/about' },
+    { name: 'menu', path: '/menu' },
     { name: 'reserve', path: '/reserve' },
   ];
 }
